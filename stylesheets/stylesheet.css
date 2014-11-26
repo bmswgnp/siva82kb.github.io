@@ -4,8 +4,8 @@ body {
   background: #151515 url("../images/bkg.png") 0 0;
   color: #eaeaea;
   font: 12px;
-  line-height: 1.1;
-  font-family: "Courier", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  line-height: 1.5;
+  font-family: "Jura", "Ubuntu", "Courier", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
 /* General & 'Reset' Stuff */
@@ -18,7 +18,7 @@ body {
 }
 
 section {
-  display: block;
+  display: inline;
   margin: 0 0 20px 0;
 }
 
@@ -26,9 +26,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
-li {
+/*li {
   line-height: 1.4 ;
-}
+}*/
 
 /* Header, <header>
    header   - container
@@ -39,7 +39,7 @@ li {
 header {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
-  border-bottom: 1px dashed #b5e853;
+  /*border-bottom: 1px dashed #b5e853;*/
   padding: 20px 0;
   margin: 0 0 40px 0;
 }
@@ -61,6 +61,7 @@ header h1 {
 header h1:before {
   content: "./ ";
   font-size: 24px;
+  float: left;
 }
 
 header h2 {
@@ -130,7 +131,7 @@ dt {
   font-weight: bold;
 }
 
-ul li {
+/*ul li {
   list-style: none;
 }
 
@@ -142,7 +143,7 @@ ul li:before {
   margin-left: -37px;
   margin-right: 21px;
   line-height: 16px;
-}
+}*/
 
 blockquote {
   color: #aaa;
@@ -245,4 +246,50 @@ a {
 
 .cf {
   zoom:1;
+}
+
+/* Custom definitions */
+ul.main-menu {
+    margin-top: -40px;
+    padding: 0;
+    width: 100%;
+}
+
+.main-menu li {
+    list-style-type: none;
+}
+
+#nav {
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+}
+
+#nav li {
+    display: table-cell;
+    width: 25%;
+    padding-right: 1px;
+    height: auto;
+    vertical-align: bottom;
+}
+
+#nav a {
+    display: block;
+    min-height: 100%;
+    padding: 4px 10px;
+    background-color: rgba(0, 0, 0, 0.1);; /*#333;*/
+    text-decoration: none;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    color: #b5e853;
+    /*border-radius: 6px 6px 0 0;*/
+}
+
+#nav a:hover {
+    color: white;
+}
+
+p.date {
+  display: inline;
+  color: #e8b553;
+  font-style: bold;
 }
